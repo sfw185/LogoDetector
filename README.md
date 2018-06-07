@@ -8,7 +8,8 @@ The output is a json file which pinpoints the time and duration each logo is fou
 
 * [FFmpeg](https://www.ffmpeg.org/) - audio/video processing
 * [OpenCV](https://opencv.org/) - computer vision library
+* [youtube-dl](https://rg3.github.io/youtube-dl/) - video downloader for 1000+ sites
 
 ## Setup
 
-* `brew install ffmpeg opencv` (on OSX)
+* `brew install ffmpeg opencv youtube-dl` (on OSX)
