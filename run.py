@@ -1,6 +1,7 @@
-import video
 import image
+import video
 
-video_path = video.download(video.get_url())
+url = video.get_url()
+video_path = video.download(url)
 video.extract_frames(video_path)
 image.detect_logos()

@@ -1,4 +1,5 @@
 from subprocess import call
+import cleanup
 import glob
 import sys
 import os
@@ -23,18 +24,13 @@ def download(url):
     '-oinput/videos/%(title)s.%(ext)s',
     url]
   )
-  return latest_file()
+  return latest_video()
 
-def latest_file():
+def latest_video():
   files = glob.glob('./input/videos/*')
   latest = max(files, key=os.path.getctime)
   return latest
 
-def delete_frames():
-  files = glob.glob('./input/frames/*.jpg')
-  for file in files:
-    os.remove(file)
-
 def extract_frames(video_path):
-  delete_frames()
+  cleanup.delete_files('./input/frames/*.jpg')
   os.system('ffmpeg -i "{0}" -vf fps=5 ./input/frames/%05d.jpg'.format(video_path))
