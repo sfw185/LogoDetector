@@ -1,11 +1,11 @@
 ## Summary
 
-LogoBot is a rapid image processor that can detect a series of logos in a given video.
+Logo Detector is a rapid image processor that can detect a series of logos in a given video.
 
 ## Usage
 
-* Call LogoBot with `python run.py SOME_VIDEO_URL`
-* LogoBot will download the given video URL and parse it for logos placed in `input/logos`
+* Call Logo Detector with `python run.py SOME_VIDEO_URL`
+* Logo Detector will download the given video URL and parse it for logos placed in `input/logos`
 * If any of the logos are found, a report will be generated in `output/VIDEO_NAME` and displayed in the console
 
 ## Dependencies
